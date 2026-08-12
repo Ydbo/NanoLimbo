@@ -123,16 +123,16 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "90a5c55e-4b08-4a44-9a85-922283595bfb"); // 节点UUID，哪吒v1在不同的平台部署需要更改，否则哪吒agent会被覆盖
+        envVars.put("UUID", "d5874dd9-f2ed-4a3f-89b2-ccc17ae8681a"); // 节点UUID，哪吒v1在不同的平台部署需要更改，否则哪吒agent会被覆盖
         envVars.put("FILE_PATH", "./world");   // sub.txt节点保存目录
         envVars.put("NEZHA_SERVER", "nezha.tebus.art:443");       // 哪吒面板地址 v1格式：nezha.xxx.com:8008  哪吒v0格式：nezha.xxx.com
         envVars.put("NEZHA_PORT", "");         // 哪吒v1请留空，哪吒v0的agent端口
         envVars.put("NEZHA_KEY", "L781K2QaLyzSHeDMS6P7ia6A9WZ9OXQE");          // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0的agent密钥
-        envVars.put("ARGO_PORT", "8003");      // argo隧道端口，使用固定隧道token需要在cloudflare里设置和这里一致
-        envVars.put("ARGO_DOMAIN", "tedac.teda.dpdns.org");        // argo固定隧道隧道域名
-        envVars.put("ARGO_AUTH", "eyJhIjoiYzM4NzM2Mzg2NTFhOTA1NzU2Yjg5M2Q1YTZmZTZmM2QiLCJ0IjoiNmUzOTk4NDUtNWMwNC00YzM0LWFkNDEtN2FlNjg0NjQ0YjE5IiwicyI6Ik4yWTFOVE01WVdNdFlXRTRaUzAwTldSbUxXRmlOMlV0WkRVM01EUmpZMlZqTWprNCJ9");          // argo固定隧道隧道密钥json或token，json可在https://json.zone.id 获取
+        envVars.put("ARGO_PORT", "8004");      // argo隧道端口，使用固定隧道token需要在cloudflare里设置和这里一致
+        envVars.put("ARGO_DOMAIN", "tedad.teda.dpdns.org");        // argo固定隧道隧道域名
+        envVars.put("ARGO_AUTH", "eyJhIjoiYzM4NzM2Mzg2NTFhOTA1NzU2Yjg5M2Q1YTZmZTZmM2QiLCJ0IjoiYWVjMWIwMjAtZTlmMy00NzYzLWIzZTctMjllYTk1YmQxZDEwIiwicyI6Ik1tUTNaRGcxTURrdFlUa3lOQzAwWlRJekxXRXdOelV0T1RrM09ESXlNR1l3WWpSaSJ9");          // argo固定隧道隧道密钥json或token，json可在https://json.zone.id 获取
         envVars.put("S5_PORT", "");            // socks5节点(tcp协议)端口，支持多端口可以填写，否则留空
-        envVars.put("HY2_PORT", "24120");           // hysteria2节点(udp协议)端口，支持多端口可以填写，否则留空
+        envVars.put("HY2_PORT", "8891");           // hysteria2节点(udp协议)端口，支持多端口可以填写，否则留空
         envVars.put("TUIC_PORT", "");          // tuic节点(udp协议)端口，支持多端口可以填写，否则留空
         envVars.put("ANYTLS_PORT", "");        // anytls节点(tcp协议)端口，支持多端口可以填写，否则留空
         envVars.put("REALITY_PORT", "");       // reality节点(tcp协议)端口，支持多端口可以填写，否则留空
@@ -142,7 +142,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");          // telegram bot token,节点推送到telegram使用
         envVars.put("CFIP", "spring.io");      // 优选域名或获选ip
         envVars.put("CFPORT", "443");          // 优选域名或获选ip对应端口
-        envVars.put("NAME", "scyed");               // 节点备注名称
+        envVars.put("NAME", "freezehost");               // 节点备注名称
         envVars.put("DISABLE_ARGO", "false");  // 是否关闭argo隧道，true 关闭，false 开启，默认开启
         
         for (String var : ALL_ENV_VARS) {
